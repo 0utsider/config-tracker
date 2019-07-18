@@ -25,7 +25,9 @@ init() {
 	# Initialise git repo
 	git init -q
 
+    # Add remote repository
     [ ! -z "$remote" ] && git remote add origin ${remote}
+    [ ! -z "$remote" ] && git config credential.helper store
 
 	# Install crontab entry if it doesn't already exist
 	[ ! -e "/etc/cron.d/config-tracker" ] && cp "${0%/*}/contrib/cron" "/etc/cron.d/config-tracker" && chmod 0644 /etc/cron.d/config-tracker
