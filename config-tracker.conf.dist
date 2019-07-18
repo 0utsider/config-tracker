@@ -1,6 +1,9 @@
 # Path to the config storage dir (git working tree)
 repo="/var/lib/config"
 
+# Remote repository (git repository address)
+remote=""
+
 # Email address for notifications to go to
 notification_emails="foo@example.com"
 
