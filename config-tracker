@@ -85,7 +85,7 @@ update() {
 	reconfigure
 	sync
 	commit
-    [ ! -z "$remote"] && push
+    [ ! -z "$remote" ] && push
 }
 
 #
