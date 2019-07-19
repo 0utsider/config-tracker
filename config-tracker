@@ -111,7 +111,7 @@ commit() {
 # Pushes local config repo to remote/central repository.
 #
 push() {
-    git push origin master:$(hostname -s)
+    git push -q origin master:$(hostname -s)
 }
 
 if [ "$(type -t $1)" ]; then $1; else echo "Usage: $0 <action>. Where action is one of:" $(compgen -A function) && exit 1; fi
